@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="You like Ethereum? You are a developer? You will love devETH. devETH is exactly like Ethereum. Just cheaper." />
-    <title>Why devETH?</title>
+    <title>Mining Guide</title>
 
     <link href="style.css" rel="stylesheet">
 </head>
@@ -54,9 +54,31 @@
     <main class="flex-shrink-0 container mt-3 mt-md-5 ps-3">
         <h1 class="mb-3">Mining Guide</h1>
 
-        <p>To be announced.</p>
-
+        <h3 class="mb-3">Node Setup Linux</h3>
+        <p><i class="fw-bold">→ Skip the node setup if you're going to mine using a pool</i></p>
+        <p>If you're installing a full node, make sure you have an SSD with at least 1TB of free disk space. Run the
+            following commands:</p>
+        <pre>
+wget https://raw.githubusercontent.com/geohot/configuration/master/.tmux.conf
+git clone https://github.com/devethorg/go-ethereum.git -b deveth
+cd go-ethereum
+sudo apt install make golang-go
+make geth</pre>
+        <p>and then:</p>
+        <pre>./build/bin/geth --syncmode fast --cache 26000 --rpc --rpcaddr 127.0.0.1 --rpcapi eth,web3,debug,net --rpcvhosts=* --networkid 787 --mine</pre>
+        <p>The node will take several hours to synchronize.</p>
+        <h3 class="mt-4 mb-3">GPU Mining Setup</h3>
+        <p>Download the latest ethminer from GitHub, unpack it and start using the following commands:</p>
+        <pre>wget https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
+tar -xvf ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
+cd bin/</pre>
+<p>If you have a CUDA-Enabled <b>Nvidia</b> graphics card run:</p>
+<pre>./ethminer -U -P http://127.0.0.1:8545/</pre>
+<p>If you have an <b>AMD</b> (OpenGL) graphics card run:</p>
+<pre>./ethminer -G -P http://127.0.0.1:8545/</pre>
+<p>If you have any questions or you're facing issues setting yourself up don't hesitate to ask for help on our  <a href="https://discord.gg/xFmCcaEjPK" target="_blank">Discord server</a>.</p>
     </main>
+
 
     <footer class="mt-auto text-white-50 bg-dark w-100 text-center p-3">
         <p class="mb-0"> &copy; 2021 devETH Foundation — <a href="https://github.com/devethorg"
