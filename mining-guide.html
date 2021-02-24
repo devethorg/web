@@ -68,7 +68,8 @@ cd go-ethereum
 sudo apt install make golang-go
 make geth</pre>
         <p>and then:</p>
-        <pre>./build/bin/geth --syncmode fast --cache 26000 --rpc --rpcaddr 127.0.0.1 --rpcapi eth,web3,debug,net --rpcvhosts=* --networkid 787 --mine</pre>
+        <pre>./build/bin/geth --syncmode fast --mine --miner.etherbase=YOUR_ADDRESS --cache 26000 --rpc --rpcaddr 127.0.0.1 --rpcapi eth,web3,debug,net --rpcvhosts=* --networkid 777</pre>
+        <p>Make sure to set the miner.etherbase to your address.</p>
         <p>The node will take several hours to synchronize.</p>
         <h3 class="mt-4 mb-3">GPU Mining Setup</h3>
         <p>Download the latest ethminer from GitHub, unpack it and start using the following commands:</p>
