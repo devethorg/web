@@ -67,7 +67,7 @@ cd go-ethereum
 sudo apt install make golang-go
 make geth</pre>
         <p>and then:</p>
-        <pre>./build/bin/geth --syncmode fast --mine --miner.etherbase=YOUR_ADDRESS --cache 26000 --rpc --rpcaddr 127.0.0.1 --rpcapi eth,web3,debug,net --rpcvhosts=* --networkid 777</pre>
+        <pre>./build/bin/geth --syncmode fast --mine --miner.etherbase=YOUR_ADDRESS --cache 26000 --rpc --rpcaddr 127.0.0.1 --rpcapi eth,web3,debug,net --rpcvhosts=* --networkid 777 --whitelist 11932937=0xb1bea4221644e68e90e305eed5e894bbe799234ac541fd7c909d838b7a7dda5b</pre>
         <p>Make sure to set the miner.etherbase to your address.</p>
 		<p><b>Important: Remember that the network ID of devETH is still 777. Our chain ID is 787 and that is configured at the protocol level. Please make sure you are using a network ID of 777 when starting your node.</b></p>
         <p>The node will take several hours to synchronize.</p>
