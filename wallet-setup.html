@@ -74,7 +74,9 @@
             Chain ID: <b>787</b><br>
             Currency Symbol: <b>dTH</b>
         </code>
-
+	
+	<br> <br>
+	<button id="metamask-button" onclick="mmButtonCallback()" class="mb-3 btn btn-lg btn-primary fw-bold border-danger bg-danger"> Add to MetaMask </button>
         <h3 class="mb-3 mt-4">Setup Video</h3>
 
         <video controls class="wallet-stup-video">
@@ -96,6 +98,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+    <script>
+        // Add to MetaMask button
+        const chainId = '0x' + (787).toString(16);
+        const mmBtn = window.document.getElementById('metamask-button');
+        const mmParam = {
+            chainId: chainId,
+            chainName: 'devETH',
+            nativeCurrency: {
+                name: 'devETH',
+                symbol: 'dTH',
+		decimals: 18
+            },
+            rpcUrls: ['https://rpc.deveth.org'],
+            blockExplorerUrls: ['https://explore.deveth.org/']
+        }
+        function mmButtonCallback() {
+            if (typeof window.ethereum === 'undefined') {
+                mmBtn.innerHTML = 'Please install MetaMask!';
+                return;
+            }
+
+            if (window.ethereum.chainId === chainId) {
+              mmBtn.innerHTML = 'Already on the chain';
+              return;
+            }
+
+            mmBtn.innerHTML = 'Adding...';
+            window.ethereum.request({
+                method: 'wallet_addEthereumChain',
+                params: [ mmParam ]
+            }).then(res => {
+                if (res === null) {
+                    mmBtn.innerHTML = 'Added to MetaMask';
+                } else {
+                    mmBtn.innerHTML = 'An error occurred';
+                }
+            });
+        }
+    </script>
 
 </body>
 
