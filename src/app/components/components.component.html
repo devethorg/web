@@ -1,0 +1,166 @@
+<div class="wrapper">
+  <div class="page-header clear-filter" filter-color="green">
+    <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/illustration.svg'); background: rgb(51, 51, 51);">
+    </div>
+      <div class="container">
+          <div class="content-center brand">
+              <h1 class="h1-seo">devETH</h1>
+              <h3>You like Ethereum? You're a developer?
+                You will love devETH. It's exactly like normal Ethereum.
+                Just much cheaper!</h3>
+                <a class="btn btn-primary btn-simple btn-round" type="button" routerLink="." fragment="whyDevEth">Lern more</a>
+                <a class="btn btn-primary btn-simple btn-round" type="button">Community projects</a>
+          </div>
+      </div>
+  </div>
+
+  <div class="main">
+
+    <div class="section section-basic padding-margin-tob-bottom" id="whyDevEth">
+        <div class="container">
+            <h2 class="title">Why devETH</h2>
+            <p>devETH is exactly like Ethereum. Ethereum has become so big and expensive making it hard for new developers to join in and learn. On devETH you can participate in every aspect of the chain, even the mining! If you mess up, no problem. devETH is cheap and always will be.</p>
+    
+            <p>While devETH is cheap, it is not free. There are miners making sure the chain is safe and secure. This costs money. So naturally there will be a price for devETH. The aim is to peg the value of 1 devETH (dTH) at 0.001Ξ.</p>
+            
+            <p>devETH does not intend to run a pre-mined crowdsale. We also do not intend to pay exchanges to list us. We trust exchanges will do the listing if we provide enough value to the Ethereum ecosystem.</p>
+            
+            <p>If you have Ethereum as of block 11818959, you already have devETH. It is 100% compatible, and many existing contracts of the Ethereum mainnet are already available on devETH.</p>
+            
+            <p>If you are a miner, have a look at our Mining Guide and see how you can start <a routerLink="."  fragment="miningGuide">mining devETH</a>. If you just want to set up a <a routerLink="." fragment="walletSetup">wallet</a>, see our Wallet Setup. You can also join us on our official <a href="https://discord.com/invite/xFmCcaEjPK" target="_blank">Discordy</a> Server</p>
+        </div>
+    </div>
+
+    <div class="section section-basic padding-margin-tob-bottom" id="miningGuide">
+        <div class="container">
+            <h2 class="title">Mining guide</h2>
+
+            <h3 class="title">Node Setup Linux</h3>
+            <p>→ Skip the node setup if you're going to mine using a pool
+            
+            If you're installing a full node, make sure you have an SSD with at least 1TB of free disk space. Run the following commands:</p>
+            
+            <p><code >git clone https://github.com/devethorg/go-ethereum.git -b deveth
+            cd go-ethereum
+            sudo apt install make golang-go
+            make geth</code ></p>
+            <p>and then:</p>
+            
+            <p><code >./build/bin/geth --syncmode fast --mine --miner.etherbase=YOUR_ADDRESS --cache 26000 --rpc --rpcaddr 127.0.0.1 
+                --rpcapi eth,web3,debug,net --rpcvhosts=* --networkid 777 --whitelist 11932937=0xb1bea4221644e68e90e305eed5e894bbe799234ac541fd7c909d838b7a7dda5b</code></p>
+            <p>Make sure to set the miner.etherbase to your address.</p>
+            
+            <p>Important: Remember that the network ID of devETH is still 777. Our chain ID is 787 and that is configured at the protocol level. Please make sure you are using a network ID of 777 when starting your node.</p>
+            
+            <p>The node will take several hours to synchronize.</p>
+            
+            <h3 class="title">GPU Mining Setup</h3>
+            <p>Download the latest ethminer from GitHub, unpack it and start using the following commands:</p>
+            
+            <code >wget https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
+            tar -xvf ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
+            cd bin/</code>
+            <p>If you have a CUDA-Enabled Nvidia graphics card run:</p>
+            
+            <code >./ethminer -U -P http://127.0.0.1:8545/</code>
+            <p>If you have an AMD (OpenGL) graphics card run:</p>
+            
+            <code>./ethminer -G -P http://127.0.0.1:8545/</code >
+            <p>If you have any questions or you're facing issues setting yourself up don't hesitate to ask for help on our Discord server.</p>
+        </div>
+    </div>
+    
+    <div class="section section-basic padding-margin-tob-bottom" id="walletSetup">
+        <div class="container">
+            <h2 class="title">Wallet Setup</h2>
+
+            <h4>1. Install Metamask</h4>
+            <p>Go to the Metamask Download page and follow the instructions to install the latest Metamask client for your browser/device.</p>
+            
+            <h4>2. Configure devETH</h4>
+            <p>Open Network Settings by clicking on the network
+            Click 'Custom RPC' at the bottom
+            Fill out the form using the following:<br>
+            <kbd>Network Name: devETH</kbd><br>
+            <kbd>New RPC URL: https://rpc.deveth.org</kbd><br>
+            <kbd>Chain ID: 787</kbd><br>
+            <kbd>Currency Symbol: dTH</kbd>
+        </p>
+            <h4>how to setup</h4>
+            <video controls="" class="wallet-stup-video">
+
+                <source src="https://i.imgur.com/4RUl5I2.mp4" type="video/mp4">
+            
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            
+        </div>
+    </div>
+
+    <div class="section section-basic some-background" id="background">
+        <div class="container">
+            <h2 class="title">Some Background</h2>
+
+            <p>On February 2021, George Hotz (geohot) et al. forked the Ethereum chain to form cheapETH.
+                A project intended to provide a stable, affordable testnet for the Ethereum ecosystem, with cross-chain communication functionality.
+                The founders of the devETH project participated in this community, spending time and resources building infrastructure surrounding the project.</p>
+
+            <p>Unfortunately, days after the project was started, a member of the cheapETH community discovered and pointed out 
+                <a href="https://github.com/cheapETH/go-ethereum/commit/412c38434d8d88840452c090e738a672139a73d4#diff-67b4f96b9bd587cc5f508f38eb63f372fa31f339bf66fedcb188f78774318201R88" target="blank">patch</a> 
+                in the cheapETH fork of go-ethereum,
+                that grants 25,000,000 cheapETH tokens to the developers associated with the project. According to the cheapETH website,
+                that would theoretically amount to 25,000 Ethereum as per the pegged 1/1000 ratio described by the cheapETH developers.
+                This single transaction has theoretical market value of $46 million USD at the time of writing. (Feb 18th)</p>
+                
+            <p>Following this revelation on the cheapETH Discord server, a number of community members expressed their concern regarding this seemingly gratuitous developer fund,
+                and the details surrounding its implementation. Instead of addressing these issues,
+                the cheapETH staff appointed in the Discord community resorted to deleting messages and banning members of the community who were posing unwanted questions about the financial motivations of the cheapETH project.</p>
+                
+            <p>The devETH project authors do not intend to make any assumptions or accusations as to the financial dealings and motivations of the cheapETH developers - 
+                They are free to do whatever they wish with their project. However, prompted by the drastic response in the Discord community, 
+                and a suggestion by George Hotz, a group of cheapETH community members decided to launch the devETH project as a direct fork of the cheapETH project.</p>
+                
+            <p>We intend to continue innovating on the vision of the cheapETH project, and wish all the best to the cheapETH team on their endeavour.</p>
+                
+            <p>The devETH team invites anyone interested in our take on the cheapETH vision to participate in our Discord server.</p>
+                
+            <p><b>- The devETH team</b></p>
+            
+        </div>
+    </div>
+
+    <div class="section section-basic padding-margin-tob-bottom" id="transparancy">
+        <div class="container">
+            <h2 class="title">Details of the devETH fork</h2>
+
+            <p>Do you like the idea of cheapETH, but don't like the 25,000,000 coin <a href="https://github.com/cheapETH/go-ethereum/commit/412c38434d8d88840452c090e738a672139a73d4#" target="_blank">premine</a> that the cheapETH developers performed? Welcome to devETH.</p>
+
+            <p>This article explains some details of what was performed in the devETH fork, and some of our reasoning for it. Here is what went down in block 11932937:</p>
+                
+            <p>The fork introduced a developer fund of 100,000dTH to a multi-signature contract at address <a href="https://expedition.dev/address/0x2B37137c2f2C7d2FEd9659675A93CdDC3437DD67?network=Ethereum%20Classic&rpcUrl=https%3A%2F%2Frpc.deveth.org" target="_blank">0x2B37137c2f2C7d2FEd9659675A93CdDC3437DD67</a>. 
+                The source code of this contract can be found <a href="https://github.com/devethorg/MultiSigWallet/blob/master/contracts/MultiSigWallet.sol">here</a>. The current signers of this contract are @vkoskiv, @bmca and @iiems. (Discord usernames) We hope this large developer fund does not come across as gratuitous. The developer team has no interest in participating in the development of devETH for financial gain. We are here to learn, as we hope you are.
+            </p>
+                
+            <p>The fork drained the 25,000,000 coin fund created by the cheapETH team, and some additional, large derivative accounts of that fund. Most of the funds that were given away to cheapETH community members were not drained.
+            </p>
+                
+            <p>We are evaluating additional safety measures for our developer fund, such as a time-restricted storage contract. We are also working on procedures and protocols for deciding how these funds are to be spent. We also encourage healthy skepticism and questions from our community on Discord. Your feedback is a major driver of our decisions here at devETH.
+            </p>
+                
+            <p>The devETH team invites anyone interested in our take on the cheapETH vision to participate in our Discord server.</p>
+                
+            <p><b>- The devETH team | (Updated on 24.02.2021)</b></p>
+            
+        </div>
+    </div>
+  <footer class="footer" data-background-color="black">
+      <div class="container">
+          <div class="copyright">
+              &copy;
+              2021 devETH Foundation
+              <a href="https://github.com/devethorg" target="_blank">github</a> | 
+              <a href="https://twitter.com/devethorg" target="_blank">Twitter</a>.
+          </div>
+      </div>
+  </footer>
+</div>
