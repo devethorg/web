@@ -1,0 +1,35 @@
+[
+    {
+        "page": {
+            "title": "devETH",
+            "headline": "You like Ethereum? You're a developer? You will love devETH. It's exactly like normal Ethereum. Just much cheaper!",
+            "more_details": "Lern more",
+            "projects": "Community projects"
+        },
+        "why_devETH": {
+            "id": "whyDevEth",
+            "title": "Why devETH",
+            "content": ""
+        },
+        "mining_guide": {
+            "id": "miningGuide",
+            "title": "Mining Guide",
+            "content": ""
+        },
+        "wallet_setup": {
+            "id": "walletSetup",
+            "title": "Wallet Setup",
+            "content": ""
+        },
+        "some_background": {
+            "id": "background",
+            "title": "Some Background",
+            "content": ""
+        },
+        "more_transparancy": {
+            "id": "transparancy",
+            "title": "Details of the devETH fork",
+            "content": ""
+        }
+    }
+]

@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
 import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
 import * as Rellax from 'rellax';
+import { Data, PageService } from './pageService.service';
 
 @Component({
     selector: 'app-components',
@@ -9,18 +10,14 @@ import * as Rellax from 'rellax';
     ngb-progressbar {
         margin-top: 5rem;
     }
-    `]
+    `],
+    providers: [PageService]
 })
 
 export class ComponentsComponent implements OnInit, OnDestroy {
+    public dataObj: Data[] = [];
 
-    public isCollapsed = true;
-    public isCollapsed1 = true;
-    public isCollapsed2 = true;
-
-    state_icon_primary = true;
-
-    constructor( private renderer : Renderer2, config: NgbAccordionConfig) {
+    constructor(private pageService : PageService , private renderer : Renderer2, config: NgbAccordionConfig) {
         config.closeOthers = true;
         config.type = 'info';
     }
@@ -32,6 +29,9 @@ export class ComponentsComponent implements OnInit, OnDestroy {
         navbar.classList.add('navbar-transparent');
         const body = document.getElementsByTagName('body')[0];
         body.classList.add('index-page');
+        this.pageService.getJSON().subscribe(data => {
+            this.dataObj = data
+        });
     }
 
     ngOnDestroy(){
