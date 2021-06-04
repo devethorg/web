@@ -32,3 +32,15 @@
 .wallet-stup-video {
     width: 100%;
 }
+
+img {
+    margin-bottom: 30px;
+    margin-top: 200px;
+    &.logo_start_page {
+        width: 200px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+  }
