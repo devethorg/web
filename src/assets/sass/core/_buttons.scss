@@ -104,6 +104,13 @@
     background-color: $transparent-bg;
 }
 
+.btn-custom {
+    border-radius: 30px;
+    border-color: '#fff';
+    padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
+    background-color: '#583d72';
+}
+
 .btn-simple,
 .btn-link{
     &.disabled,

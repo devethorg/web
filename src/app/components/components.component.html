@@ -1,13 +1,14 @@
 <div class="wrapper" *ngIf="dataObj">
   <div class="page-header clear-filter" filter-color="green" *ngFor="let data of dataObj">
-    <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/illustration.svg'); background: #a7c4bc">
+    <div class="page-header-image rellax-header" data-rellax-speed="-7" style="    background: linear-gradient(to right, rgb(21, 87, 153), rgb(21, 153, 87));
+    color: rgb(255, 255, 255);">
     </div>
       <div class="container">
           <div class="content-center brand">
             <img class="logo_start_page" src="./assets/img/deveth.png">
               <h1 class="h1-seo">{{data.page.title}}</h1>
               <h3>{{data.page.headline}}</h3>
-                <a class="btn btn-primary btn-simple btn-round" type="button" routerLink="." fragment="whyDevEth">{{data.page.more_details}}</a>
+                <a class="btn btn-primary btn-custom" type="button" routerLink="." fragment="whyDevEth">{{data.page.more_details}}</a>
           </div>
       </div>
   </div>
