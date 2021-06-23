@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ComponentsComponent } from './components/components.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TabsComponent } from './shared/tabs/tabs.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
-        ComponentsComponent
+        ComponentsComponent,
+        TabsComponent
     ],
     imports: [
         BrowserAnimationsModule,
