@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+.page-header .page-header-image {
+    background-size: 100% !important;
+    background-position: center center;
+    background-repeat: no-repeat !important;
+}
+
+.page-header[filter-color=green] {
+    background: rgba(44, 44, 44, 0.2);
+    background: linear-gradient(
+0deg
+, rgba(44, 44, 44, 0.2), rgb(123 255 211 / 38%));
+}
+
+.some-background {
+    background: #eeeee4 !important;
+    padding: 30px 0 !important;
+    margin: 30px 0 !important;
+
+    a {
+        color: #ff6600 !important;
+        text-decoration: underline;
+    }
+}
+
+.comunity {
+    background: #ff8573 !important;
+    padding: 30px 0 !important;
+    margin: 30px 0 !important;
+    color: #fff !important;
+
+    a {
+        color: #fff !important;
+        text-decoration: underline;
+    }
+}
+
+.padding-margin-tob-bottom {
+    padding: 30px 0 !important;
+    margin: 30px 0 !important;
+}
+
+.wallet-stup-video {
+    width: 100%;
+}
+
+img {
+    margin-bottom: 30px;
+    margin-top: 200px;
+    &.logo_start_page {
+        width: 200px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+.list-group {
+    display: inherit !important;
+    margin-top: 60px;
+}
+
+.justify-content-start {
+    justify-content: center !important;
+}
+
+.nav-tabs > .nav-item > .nav-link.active {
+    border: none !important;
+    border-radius: 30px;
+    background: #583d72 !important;
+    text-decoration: none;
+}
+
+.alert.alert-warning {
+    background-color: rgb(255 178 54 / 43%);
+    text-align: center;
+    border-left: 3px solid #583d72;
+    margin-bottom: 0;
+    margin-top: 60px;
+}
+
+.list-group-item {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+    background: none !important;
+    border: none;
+    font-weight: 400;
+    
+    a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        i {
+            font-size: 50px;
+            text-align: center;
+            color: #23667d; display: inherit;
+        }
+        img {
+            display: inherit;
+            width: 80px;
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &.active {
+        background-color: #583d72 !important;
+    }
+}
