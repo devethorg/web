@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg bg-primary fixed-top" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" [routerLink]="['/']" placement="bottom">
+                <b>devETH</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+      </div>
+        <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="green">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="." fragment="whyDevEth">
+                      <b>Why devETH</b>
+                  </a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="." fragment="miningGuide">
+                      <b>Mining guide</b>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="." fragment="walletSetup">
+                        <b>Wallet setup</b>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="." fragment="background">
+                      <b>Background</b>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="." fragment="transparancy">
+                    <b>Transparacy</b>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://serverhub.icu/" target="_blank">
+                    <b>Mining pools</b>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://explore.deveth.org/" target="_blank">
+                    <b>Block-Explorer</b>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://discord.com/invite/xFmCcaEjPK" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <p class="d-lg-none d-xl-none">discord</p>
+                </a>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/devethorg" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <p class="d-lg-none d-xl-none">Twitter</p>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

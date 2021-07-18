@@ -1,0 +1,65 @@
+<ngb-tabset #t="ngbTabset">
+    <ngb-tab id="tabs-market" title="MARKETS">
+      <ng-template ngbTabContent>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="https://exchange.centex.io/exchange/DTH-ETH" target="_blank">
+              <img src="./assets/img/centex.png"/>
+              Centex</a>
+          </li>
+        </ul>
+
+      </ng-template>
+    </ngb-tab>
+    
+    <ngb-tab id="tab-dapps" title="DAPPS/DEFI">
+      <ng-template ngbTabContent>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="https://www.devethswap.de/#/swap" target="blank">
+            <img src="./assets/img/deveth_swap.png"/>
+            devethSwap</a></li>
+          <li class="list-group-item"><a href="https://www.unklick.de/deveth_farm/" target="_blank">
+            <img src="./assets/img/deveth_farm.png"/>
+            devethFarm</a></li>
+          <li class="list-group-item"><a href="https://www.unklick.de/" target="_blank">
+            <img src="./assets/img/image_poser.png"/>
+            Image poser</a></li>
+          <li class="list-group-item"><a href="https://www.devethwallet.de/" target="_blank">
+            <img src="./assets/img/deveth_wallet.png"/>
+            devETH wallet</a></li>
+        </ul>
+        <div class="alert alert-warning" role="alert">
+          Your DAPPS doesn't show in the list? Tell us your story! <br> we grant you with a bunch of dTH while you developing and make a publisch.
+        </div>
+
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab id="tab-mining" title="MINING">
+      <ng-template ngbTabContent>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="https://cethpool.vkoskiv.com/" target="_blank">
+            <img src="./assets/img/mining_pool.png"/>
+            vkoskivPool</a></li>
+          <li class="list-group-item"><a href="https://pool.serverhub.icu/" target="_blank">
+            <img src="./assets/img/mining_pool.png"/>
+            ServerHub</a></li>
+        </ul>
+
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab id="tab-block-explorer" title="BLOCK EXPLORER">
+      <ng-template ngbTabContent>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="https://explore.deveth.org/" target="_blank">
+            <img src="./assets/img/block_explorer.png"/>
+            devETH block<br>explorer</a></li>
+          <li class="list-group-item"><a href="https://expedition.dev/?network=Ethereum%20Classic&rpcUrl=https%3A%2F%2Frpc.deveth.org" target="_blank">
+            <img src="./assets/img/block_explorer.png"/>
+            Decent Block<br>explorer</a></li>
+        </ul>
+
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
